@@ -1,0 +1,150 @@
+/* ----- Wallets.scss ----- */
+@import "../../util/styles/Theme.scss";
+
+.wallets {
+  width: 100%;
+  height: 100%;
+  background-color: $grey-dark;
+  .wallets__navbar {
+  }
+  .wallets__body {
+    width: 100%;
+    height: calc(100% - 70px);
+    // background-color: lightseagreen;
+    @include flexbox;
+
+    .wallets__sidebar {
+      width: 250px;
+      height: 100%;
+      // background-color: lightcoral;
+    }
+    .wallets__content {
+      width: calc(100% - 250px);
+      height: 100%;
+      // background-color: lightgreen;
+      overflow-y: auto;
+      @include flexbox;
+      flex-direction: column;
+      justify-content: flex-start;
+
+      padding-top: 20px;
+
+      .wallets__mint {
+        width: calc(100% - 40px);
+        height: 200px;
+        // background-color: lightblue;
+        background-color: $grey-regular;
+
+        @include flexbox;
+        flex-direction: column;
+
+        border-radius: 5px;
+        margin-bottom: 10px;
+        padding: 20px;
+
+        .wallets__mint__content__header {
+          width: 100%;
+          height: 25%;
+        //   background-color: lightgreen;
+
+          @include flexbox;
+          justify-content: flex-start;
+
+          p {
+            font-size: $font-regular;
+            color: $grey-light;
+          }
+        }
+        .wallets__mint__content__body {
+          width: 100%;
+          height: 50%;
+          // background-color: coral;
+
+          @include flexbox;
+
+          .wallets__mint__content__body__left {
+            width: 50%;
+            height: 100%;
+            // background-color: lightgreen;
+
+            @include flexbox;
+            justify-content: flex-start;
+
+            input {
+              width: 50%;
+              padding: 15px;
+              background-color: $grey-dark;
+              color: $grey-light;
+
+              font-size: $font-regular;
+              border-radius: 5px;
+              border: none;
+              box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+            }
+          }
+          .wallets__mint__content__body__right {
+            width: 50%;
+            height: 100%;
+            // background-color: lightcoral;
+
+            @include flexbox;
+            justify-content: flex-end;
+
+            button {
+              width: 50%;
+              background-color: $blue-regular;
+
+              border: none;
+
+              padding: 15px;
+              cursor: pointer;
+
+              font-size: $font-medium;
+              font-weight: 600;
+              color: $grey-dark;
+              border-radius: 5px;
+              transition: background-color 0.5s ease-in-out;
+
+              &:hover {
+                background-color: darken($color: $blue-regular, $amount: 20);
+              }
+            }
+          }
+        }
+        .wallets__mint__content__footer {
+          width: 100%;
+          height: 25%;
+        //   background-color: lightgreen;
+
+          @include flexbox;
+
+          .wallets__mint__content__footer__icon {
+            width: 100%;
+            height: 100%;
+            //   background-color: lightpink;
+            @include flexbox;
+            justify-content: flex-start;
+
+            .wallets__mint__content__footer__icon__container {
+              width: 100px;
+              height: 30px;
+              // background-color: lightgreen;
+
+              @include flexbox;
+
+              background-color: rgba($color: $blue-regular, $alpha: 0.2);
+              border: 2px solid $blue-regular;
+
+              border-radius: 25px;
+
+              p {
+                font-size: $font-small;
+                color: $blue-regular;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

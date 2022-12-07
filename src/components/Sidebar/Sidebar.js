@@ -56,11 +56,11 @@ function Sidebar({ page }) {
         {/* Secondary Wallets */}
         <div
           className="sidebar__item"
-          style={setStyles("secondarywallets").backgroundStyles}
+          style={setStyles("wallets").backgroundStyles}
         >
           <div className="sidebar__item__text">
-            <Link to="/secondarywallets" style={{ textDecoration: "none" }}>
-              <p style={setStyles("secondarywallets").colorStyles}>
+            <Link to="/wallets" style={{ textDecoration: "none" }}>
+              <p style={setStyles("wallets").colorStyles}>
                 Secondary Wallets
               </p>
             </Link>
