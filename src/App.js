@@ -1,23 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
+/* ----- App.js ----- */
+import "./App.scss";
+
+//Packages
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+
+//Components
+import Minting from "./components/Minting/Minting";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="app">
+      <Router>
+        <Routes>
+          <Route exact path="/stake" element={<p>Stake</p>} />
+          <Route
+            exact
+            path="/secondarywallets"
+            element={<p>Secondary Wallets</p>}
+          />
+          <Route exact path="/tasks" element={<p>Tasks</p>} />
+          <Route exact path="/" element={<Minting />} />
+        </Routes>
+      </Router>
     </div>
   );
 }

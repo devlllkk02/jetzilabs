@@ -1,0 +1,40 @@
+/* ----- Sidebar.scss ----- */
+@import "../../util/styles/Theme.scss";
+
+.sidebar {
+  width: 100%;
+  height: calc(100vh - 70px);
+  background-color: $grey-regular;
+  @include flexbox;
+
+  .sidebar__container {
+    width: 100%;
+    height: 100%;
+
+    @include flexbox;
+    justify-content: flex-start;
+    flex-direction: column;
+    .sidebar__item {
+      width: 230px;
+      height: 50px;
+      //   background-color: lightgreen;
+      background-color: $grey-dark;
+
+      @include flexbox;
+      justify-content: flex-start;
+
+      margin: 10px auto;
+      border-radius: 10px;
+
+      .sidebar__item__text {
+        p {
+          font-size: $font-small;
+          font-weight: 500;
+          color: $blue-regular;
+          padding-left: 20px;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}

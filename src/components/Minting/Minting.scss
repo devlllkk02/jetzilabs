@@ -1,0 +1,26 @@
+/* ----- Mining.scss ----- */
+@import "../../util/styles/Theme.scss";
+
+.mining {
+  width: 100%;
+  height: 100%;
+  .mining__navbar {
+  }
+  .mining__body {
+    width: 100%;
+    height: calc(100% - 70px);
+    // background-color: lightseagreen;
+    @include flexbox;
+
+    .mining__sidebar {
+      width: 250px;
+      height: 100%;
+      // background-color: lightcoral;
+    }
+    .mining__content {
+      width: calc(100% - 250px);
+      height: 100%;
+      // background-color: lightgreen;
+    }
+  }
+}
