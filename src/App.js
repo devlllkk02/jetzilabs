@@ -6,6 +6,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 //Components
 import Minting from "./components/Minting/Minting";
+import Tasks from "./components/Tasks/Tasks";
 
 function App() {
   return (
@@ -18,7 +19,7 @@ function App() {
             path="/secondarywallets"
             element={<p>Secondary Wallets</p>}
           />
-          <Route exact path="/tasks" element={<p>Tasks</p>} />
+          <Route exact path="/tasks" element={<Tasks />} />
           <Route exact path="/" element={<Minting />} />
         </Routes>
       </Router>

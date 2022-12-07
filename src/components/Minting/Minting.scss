@@ -1,24 +1,24 @@
-/* ----- Mining.scss ----- */
+/* ----- Minting.scss ----- */
 @import "../../util/styles/Theme.scss";
 
-.mining {
+.minting {
   width: 100%;
   height: 100%;
   background-color: $grey-dark;
-  .mining__navbar {
+  .minting__navbar {
   }
-  .mining__body {
+  .minting__body {
     width: 100%;
     height: calc(100% - 70px);
     // background-color: lightseagreen;
     @include flexbox;
 
-    .mining__sidebar {
+    .minting__sidebar {
       width: 250px;
       height: 100%;
       // background-color: lightcoral;
     }
-    .mining__content {
+    .minting__content {
       width: calc(100% - 250px);
       height: 100%;
       // background-color: lightgreen;
@@ -26,13 +26,13 @@
       @include flexbox;
       align-items: flex-start;
 
-      .mining__content_s1 {
+      .minting__content_s1 {
         width: 60%;
         min-height: 100%;
         // background-color: lightgreen;
         padding-top: 20px;
 
-        .mining__content__item {
+        .minting__content__item {
           width: calc(100% - 40px);
           height: 100px;
           // background-color: lightblue;
@@ -42,7 +42,7 @@
           margin: 0px auto;
           margin-bottom: 10px;
 
-          .mining__content__item__text {
+          .minting__content__item__text {
             width: 100%;
             height: 40%;
             // background-color: lightpink;
@@ -56,7 +56,7 @@
               color: $white;
             }
           }
-          .mining__content__item__control {
+          .minting__content__item__control {
             width: 100%;
             height: 60%;
             // background-color: coral;
@@ -75,19 +75,19 @@
           }
         }
 
-        .mining__content__divider {
+        .minting__content__divider {
           @include flexbox;
-          .mining__content__divider__left {
+          .minting__content__divider__left {
             width: 50%;
             // background-color: lightgreen;
           }
-          .mining__content__divider__right {
+          .minting__content__divider__right {
             width: 50%;
             // background-color: lightcoral;
           }
         }
 
-        .mining__content__button {
+        .minting__content__button {
           width: calc(100% - 40px);
           height: 100px;
           // background-color: lightblue;
@@ -118,7 +118,7 @@
           }
         }
       }
-      .mining__content_s2 {
+      .minting__content_s2 {
         width: 40%;
         min-height: 100%;
         // background-color: lightcoral;
