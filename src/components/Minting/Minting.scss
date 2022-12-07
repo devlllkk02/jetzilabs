@@ -4,6 +4,7 @@
 .mining {
   width: 100%;
   height: 100%;
+  background-color: $grey-dark;
   .mining__navbar {
   }
   .mining__body {
@@ -21,6 +22,108 @@
       width: calc(100% - 250px);
       height: 100%;
       // background-color: lightgreen;
+      overflow-y: auto;
+      @include flexbox;
+      align-items: flex-start;
+
+      .mining__content_s1 {
+        width: 60%;
+        min-height: 100%;
+        // background-color: lightgreen;
+        padding-top: 20px;
+
+        .mining__content__item {
+          width: calc(100% - 40px);
+          height: 100px;
+          // background-color: lightblue;
+
+          @include flexbox;
+          flex-direction: column;
+          margin: 0px auto;
+          margin-bottom: 10px;
+
+          .mining__content__item__text {
+            width: 100%;
+            height: 40%;
+            // background-color: lightpink;
+
+            @include flexbox;
+            justify-content: flex-start;
+
+            p {
+              font-size: $font-medium;
+              font-weight: 500;
+              color: $white;
+            }
+          }
+          .mining__content__item__control {
+            width: 100%;
+            height: 60%;
+            // background-color: coral;
+
+            input {
+              width: 100%;
+              padding: 15px;
+              background-color: $grey-regular;
+              color: $grey-light;
+
+              font-size: $font-regular;
+              border-radius: 5px;
+              border: none;
+              box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+            }
+          }
+        }
+
+        .mining__content__divider {
+          @include flexbox;
+          .mining__content__divider__left {
+            width: 50%;
+            // background-color: lightgreen;
+          }
+          .mining__content__divider__right {
+            width: 50%;
+            // background-color: lightcoral;
+          }
+        }
+
+        .mining__content__button {
+          width: calc(100% - 40px);
+          height: 100px;
+          // background-color: lightblue;
+
+          @include flexbox;
+          flex-direction: column;
+          margin: 0px auto;
+          margin-bottom: 10px;
+
+          button {
+            width: 100%;
+            background-color: $blue-regular;
+
+            border: none;
+
+            padding: 15px;
+            cursor: pointer;
+
+            font-size: $font-medium;
+            font-weight: 600;
+            color: $grey-dark;
+            border-radius: 5px;
+            transition: background-color 0.5s ease-in-out;
+
+            &:hover {
+              background-color: darken($color: $blue-regular, $amount: 20);
+            }
+          }
+        }
+      }
+      .mining__content_s2 {
+        width: 40%;
+        min-height: 100%;
+        // background-color: lightcoral;
+        padding: 10px 10px 0px 10px;
+      }
     }
   }
 }
