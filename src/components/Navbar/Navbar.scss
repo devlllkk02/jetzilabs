@@ -4,7 +4,7 @@
 .navbar {
   width: 100%;
   height: 70px;
-  //   background-color: lightgreen;
+  // background-color: lightgreen;
   background-color: $grey-regular;
 
   @include flexbox;
@@ -23,9 +23,37 @@
     }
   }
   .navbar__middle {
-    width: calc(100% - 500px);
+    width: calc(100% - 550px);
     height: 100%;
     // background-color: lightblue;
+  }
+  .navbar__notifications {
+    width: 50px;
+    height: 100%;
+    // background-color: coral;
+
+    @include flexbox;
+    position: relative;
+
+    img {
+      height: $icon-regular;
+      width: $icon-regular;
+      object-fit: contain;
+      filter: invert(55%) sepia(2%) saturate(1641%) hue-rotate(194deg)
+        brightness(91%) contrast(90%);
+      cursor: pointer;
+    }
+
+    .navbar__notifications__new {
+      width: 7px;
+      height: 7px;
+      background-color: $red-regular;
+
+      position: absolute;
+      border-radius: 50%;
+      top: 25px;
+      left: 27px;
+    }
   }
   .navbar__user {
     width: 250px;
@@ -52,7 +80,7 @@
         img {
           height: 40px;
           width: 40px;
-          //   background-color: red;
+          // background-color: red;
           background-color: $grey-regular;
 
           border: 3px solid $grey-dark;
