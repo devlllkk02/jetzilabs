@@ -4,21 +4,49 @@
 .sidebar {
   width: 100%;
   height: calc(100vh - 70px);
-  background-color: $grey-regular;
+  // background-color: $grey-regular;
   @include flexbox;
 
   .sidebar__container {
     width: 100%;
     height: 100%;
+    // background-color: coral;
+    overflow-y: auto;
+    overflow-x: hidden;
+    .sidebar__body {
+      width: 100%;
+      min-height: calc(100% - 100px);
+      // background-color: lightgreen;
 
-    @include flexbox;
-    justify-content: flex-start;
-    flex-direction: column;
-    padding-top: 20px;
+      @include flexbox;
+      justify-content: flex-start;
+      flex-direction: column;
+      padding-top: 20px;
+    }
+    .sidebar__footer {
+      width: 100%;
+      min-height: 100px;
+      // background-color: lightseagreen;
+
+      .sidebar__footer__seperator {
+        width: 80%;
+        min-height: 1px;
+        margin: 0px auto;
+        margin-bottom: 20px;
+
+        background: radial-gradient(
+          50% 50% at 50% 50%,
+          #a0f5ff 0%,
+          rgba(160, 245, 255, 0) 100%
+        );
+      }
+    }
+
+    // Sidebar Items
     .sidebar__item {
       width: 230px;
-      height: 50px;
-      background-color: lightgreen;
+      min-height: 50px;
+      // background-color: lightgreen;
       // background-color: $grey-dark;
 
       @include flexbox;
