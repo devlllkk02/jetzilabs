@@ -1,0 +1,97 @@
+/* ----- Notifications.scss ----- */
+@import "../../util/styles/Theme.scss";
+
+.notifications {
+  width: 100%;
+  height: 100%;
+  background-color: $grey-dark;
+  .notifications__navbar {
+  }
+  .notifications__body {
+    width: 100%;
+    height: calc(100% - 70px);
+    // background-color: lightseagreen;
+    @include flexbox;
+
+    .notifications__sidebar {
+      width: 250px;
+      height: 100%;
+      //   background-color: lightcoral;
+    }
+    .notifications__content {
+      width: calc(100% - 250px);
+      height: 100%;
+      //   background-color: lightgreen;
+      overflow-y: auto;
+      @include flexbox;
+      flex-direction: column;
+      justify-content: flex-start;
+
+      padding-top: 20px;
+
+      .notifications__mint {
+        width: calc(100% - 40px);
+        min-height: 150px;
+        // background-color: lightblue;
+        background-color: $grey-regular;
+
+        @include flexbox;
+        flex-direction: column;
+
+        border-radius: 5px;
+        margin-bottom: 10px;
+        // padding: 20px;
+
+        .notifications__mint__content__body {
+          width: 100%;
+          height: 100%;
+          //   background-color: coral;
+
+          @include flexbox;
+
+          .notifications__mint__content__body__left {
+            width: calc(100% - 250px);
+            height: 100%;
+            // background-color: lightgreen;
+
+            @include flexbox;
+            justify-content: flex-start;
+
+            padding: 20px;
+
+            p {
+              color: $grey-light;
+              font-size: $font-regular;
+              text-align: justify;
+            }
+          }
+          .notifications__mint__content__body__middle {
+            width: 100px;
+            height: 100%;
+            // background-color: lightseagreen;
+
+            @include flexbox;
+            position: relative;
+            p {
+              position: absolute;
+              bottom: 10px;
+              right: 20px;
+
+              color: $grey-light;
+              font-size: $font-small;
+            }
+          }
+          .notifications__mint__content__body__right {
+            width: 150px;
+            height: 100%;
+            // background-color: lightcoral;
+            background-color: rgba($color: $red-regular, $alpha: 0.2);
+
+            @include flexbox;
+            justify-content: flex-end;
+          }
+        }
+      }
+    }
+  }
+}
