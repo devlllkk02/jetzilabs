@@ -88,7 +88,15 @@
             background-color: rgba($color: $red-regular, $alpha: 0.2);
 
             @include flexbox;
-            justify-content: flex-end;
+
+            img {
+              cursor: pointer;
+              height: $icon-large;
+              width: $icon-large;
+              object-fit: contain;
+              filter: invert(41%) sepia(70%) saturate(5249%) hue-rotate(339deg)
+                brightness(86%) contrast(104%);
+            }
           }
         }
       }
