@@ -1,10 +1,10 @@
 /* ----- Sidebar.js ----- */
 import React from "react";
 import "./Sidebar.scss";
-import { colors } from "../../util/styles/Colors.js";
 
 //Packages
 import { Link } from "react-router-dom";
+import { colors } from "../../util/styles/Colors.js";
 
 function Sidebar({ page }: any) {
   //Functions
@@ -27,7 +27,6 @@ function Sidebar({ page }: any) {
           backgroundColor: colors.greyRegular,
           boxShadow: "0px 4px 4px rgba(0, 0, 0, 0)",
         },
-
         colorStyles: { color: colors.greyLight },
         iconStyles: {
           filter:

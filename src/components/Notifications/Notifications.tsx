@@ -12,7 +12,7 @@ function Notifications() {
   return (
     <div className="notifications">
       <div className="notifications__navbar">
-        <Navbar />
+        <Navbar page="notifications" />
       </div>
       <div className="notifications__body">
         <div className="notifications__sidebar">
