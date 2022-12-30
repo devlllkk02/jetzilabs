@@ -24,7 +24,7 @@ function Sidebar({ page }: any) {
     } else {
       return {
         backgroundStyles: {
-          backgroundColor: colors.greyRegular,
+          // backgroundColor: colors.greyRegular,
           boxShadow: "0px 4px 4px rgba(0, 0, 0, 0)",
         },
         colorStyles: { color: colors.greyLight },
@@ -39,78 +39,103 @@ function Sidebar({ page }: any) {
   return (
     <div className="sidebar">
       <div className="sidebar__container">
-        {/* Auto Minting Tool */}
-        <div
-          className="sidebar__item"
-          style={setStyles("autominting").backgroundStyles}
-        >
-          <div className="sidebar__item__icon">
-            <img
-              src="./images/sidebar_icons/robot-svgrepo-com.svg"
-              alt=""
-              style={setStyles("autominting").iconStyles}
-            />
+        <div className="sidebar__body">
+          {/* Auto Minting Tool */}
+          <div
+            className="sidebar__item"
+            style={setStyles("autominting").backgroundStyles}
+          >
+            <div className="sidebar__item__icon">
+              <img
+                src="./images/sidebar_icons/robot-svgrepo-com.svg"
+                alt=""
+                style={setStyles("autominting").iconStyles}
+              />
+            </div>
+            <div className="sidebar__item__text">
+              <Link to="/" style={{ textDecoration: "none" }}>
+                <p style={setStyles("autominting").colorStyles}>
+                  Auto Minting Tool
+                </p>
+              </Link>
+            </div>
           </div>
-          <div className="sidebar__item__text">
-            <Link to="/" style={{ textDecoration: "none" }}>
-              <p style={setStyles("autominting").colorStyles}>
-                Auto Minting Tool
-              </p>
-            </Link>
+          {/* Tasks */}
+          <div
+            className="sidebar__item"
+            style={setStyles("tasks").backgroundStyles}
+          >
+            <div className="sidebar__item__icon">
+              <img
+                src="./images/sidebar_icons/task-svgrepo-com.svg"
+                alt=""
+                style={setStyles("tasks").iconStyles}
+              />
+            </div>
+            <div className="sidebar__item__text">
+              <Link to="/tasks" style={{ textDecoration: "none" }}>
+                <p style={setStyles("tasks").colorStyles}>Tasks</p>
+              </Link>
+            </div>
+          </div>
+          {/* Secondary Wallets */}
+          <div
+            className="sidebar__item"
+            style={setStyles("wallets").backgroundStyles}
+          >
+            <div className="sidebar__item__icon">
+              <img
+                src="./images/sidebar_icons/wallet-money-cash-svgrepo-com.svg"
+                alt=""
+                style={setStyles("wallets").iconStyles}
+              />
+            </div>
+            <div className="sidebar__item__text">
+              <Link to="/wallets" style={{ textDecoration: "none" }}>
+                <p style={setStyles("wallets").colorStyles}>
+                  Secondary Wallets
+                </p>
+              </Link>
+            </div>
+          </div>
+          {/* Stake */}
+          <div
+            className="sidebar__item"
+            style={setStyles("stake").backgroundStyles}
+          >
+            <div className="sidebar__item__icon">
+              <img
+                src="./images/sidebar_icons/triangle-svgrepo-com.svg"
+                alt=""
+                style={setStyles("stake").iconStyles}
+              />
+            </div>
+            <div className="sidebar__item__text">
+              <Link to="/stake" style={{ textDecoration: "none" }}>
+                <p style={setStyles("stake").colorStyles}>Stake</p>
+              </Link>
+            </div>
           </div>
         </div>
-        {/* Tasks */}
-        <div
-          className="sidebar__item"
-          style={setStyles("tasks").backgroundStyles}
-        >
-          <div className="sidebar__item__icon">
-            <img
-              src="./images/sidebar_icons/task-svgrepo-com.svg"
-              alt=""
-              style={setStyles("tasks").iconStyles}
-            />
-          </div>
-          <div className="sidebar__item__text">
-            <Link to="/tasks" style={{ textDecoration: "none" }}>
-              <p style={setStyles("tasks").colorStyles}>Tasks</p>
-            </Link>
-          </div>
-        </div>
-        {/* Secondary Wallets */}
-        <div
-          className="sidebar__item"
-          style={setStyles("wallets").backgroundStyles}
-        >
-          <div className="sidebar__item__icon">
-            <img
-              src="./images/sidebar_icons/wallet-money-cash-svgrepo-com.svg"
-              alt=""
-              style={setStyles("wallets").iconStyles}
-            />
-          </div>
-          <div className="sidebar__item__text">
-            <Link to="/wallets" style={{ textDecoration: "none" }}>
-              <p style={setStyles("wallets").colorStyles}>Secondary Wallets</p>
-            </Link>
-          </div>
-        </div>
-        {/* Stake */}
-        <div
-          className="sidebar__item"
-          style={setStyles("stake").backgroundStyles}
-        >
-          <div className="sidebar__item__icon">
-            <img
-              src="./images/sidebar_icons/triangle-svgrepo-com.svg"
-              alt=""
-              style={setStyles("stake").iconStyles}
-            />
-          </div>
-          <div className="sidebar__item__text">
-            <Link to="/stake" style={{ textDecoration: "none" }}>
-              <p style={setStyles("stake").colorStyles}>Stake</p>
-            </Link>
+        <div className="sidebar__footer">
+          <div className="sidebar__footer__seperator"></div>
+          {/* Config */}
+          <div
+            className="sidebar__item sidebar__item__config"
+            style={setStyles("config").backgroundStyles}
+          >
+            <div className="sidebar__item__icon">
+              <img
+                src="./images/sidebar_icons/settings-svgrepo-com.svg"
+                alt=""
+                style={setStyles("config").iconStyles}
+              />
+            </div>
+            <div className="sidebar__item__text">
+              <Link to="/configs" style={{ textDecoration: "none" }}>
+                <p style={setStyles("config").colorStyles}>Configs</p>
+              </Link>
+            </div>
           </div>
         </div>
       </div>
