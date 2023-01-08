@@ -7,7 +7,9 @@ import "./Minting.scss";
 //Components
 import Navbar from "../Navbar/Navbar";
 import Sidebar from "../Sidebar/Sidebar";
-
+import PopupSuccess from "../Popups/PopupSuccess/PopupSuccess";
+import PopupFailure from "../Popups/PopupFailure/PopupFailure";
+import Navfooter from "../Navfooter/Navfooter";
 
 function Minting() {
   return (
@@ -144,6 +146,13 @@ function Minting() {
           </div>
           <div className="minting__content_s2"></div>
         </div>
+      </div>
+      <div className="minting__popup">
+        {/* <PopupSuccess /> */}
+        {/* <PopupFailure /> */}
+      </div>
+      <div className="minting__footer">
+        <Navfooter page="autominting" />
       </div>
     </div>
   );

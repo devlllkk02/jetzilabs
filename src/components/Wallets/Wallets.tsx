@@ -7,6 +7,7 @@ import "./Wallets.scss";
 //Components
 import Navbar from "../Navbar/Navbar";
 import Sidebar from "../Sidebar/Sidebar";
+import Navfooter from "../Navfooter/Navfooter";
 
 function Wallets() {
   return (
@@ -41,6 +42,9 @@ function Wallets() {
             </div>
           </div>
         </div>
+      </div>
+      <div className="wallets__footer">
+        <Navfooter page="wallets" />
       </div>
     </div>
   );

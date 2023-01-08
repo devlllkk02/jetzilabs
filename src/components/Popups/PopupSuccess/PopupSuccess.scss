@@ -1,0 +1,89 @@
+/* ----- PopupSuccess.scss ----- */
+@import "../../../util/styles/Theme.scss";
+
+.popupSuccess {
+  width: 100%;
+  height: 100vh;
+  //   background-color: lightgreen;
+  background-color: rgba($color: $black, $alpha: 0.5);
+
+  @include flexbox;
+
+  .popupSuccess__container {
+    width: 500px;
+    height: 80vh;
+    background-color: $grey-dark;
+
+    @include flexbox;
+    flex-direction: column;
+    padding: 30px;
+    border-radius: 20px;
+
+    .popupSuccess__icon {
+      width: 100%;
+      height: 40%;
+      // background-color: lightgreen;
+
+      @include flexbox;
+
+      img {
+        height: 90%;
+        width: auto;
+        object-fit: contain;
+        filter: invert(54%) sepia(21%) saturate(4341%) hue-rotate(108deg)
+          brightness(92%) contrast(86%);
+      }
+    }
+    .popupSuccess__title {
+      width: 100%;
+      height: 30%;
+      // background-color: coral;
+
+      @include flexbox;
+
+      p {
+        font-size: 72px;
+        font-weight: 500;
+        color: $green-regular;
+      }
+    }
+    .popupSuccess__message {
+      width: 100%;
+      height: 10%;
+      // background-color: lightgreen;
+
+      @include flexbox;
+
+      p {
+        color: $white;
+      }
+    }
+    .popupSuccess__button {
+      width: 100%;
+      height: 20%;
+      // background-color: coral;
+
+      @include flexbox;
+
+      button {
+        width: 250px;
+        background-color: $green-regular;
+
+        border: none;
+
+        padding: 15px;
+        cursor: pointer;
+
+        font-size: $font-medium;
+        font-weight: 600;
+        color: $white;
+        border-radius: 20px;
+        transition: background-color 0.5s ease-in-out;
+
+        &:hover {
+          background-color: lighten($color: $green-regular, $amount: 10);
+        }
+      }
+    }
+  }
+}
