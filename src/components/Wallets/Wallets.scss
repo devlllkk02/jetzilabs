@@ -5,8 +5,7 @@
   width: 100%;
   height: 100%;
   background-color: $grey-dark;
-  .wallets__navbar {
-  }
+
   .wallets__body {
     width: 100%;
     height: calc(100% - 70px);
@@ -41,18 +40,20 @@
         border-radius: 5px;
         margin-bottom: 10px;
         padding: 20px;
-
         .wallets__mint__content__header {
           width: 100%;
           height: 25%;
-          //   background-color: lightgreen;
+          // background-color: lightgreen;
 
           @include flexbox;
           justify-content: flex-start;
 
           p {
+            width: 100%;
             font-size: $font-regular;
             color: $grey-light;
+            padding: 0px 10px;
+            word-wrap: break-word;
           }
         }
         .wallets__mint__content__body {
@@ -72,6 +73,7 @@
 
             input {
               width: 50%;
+              min-width: 275px;
               padding: 15px;
               background-color: $grey-dark;
               color: $grey-light;
@@ -92,6 +94,7 @@
 
             button {
               width: 50%;
+              min-width: 275px;
               background-color: $blue-regular;
 
               border: none;
@@ -114,14 +117,14 @@
         .wallets__mint__content__footer {
           width: 100%;
           height: 25%;
-          //   background-color: lightgreen;
+          // background-color: lightgreen;
 
           @include flexbox;
 
           .wallets__mint__content__footer__icon {
             width: 100%;
             height: 100%;
-            //   background-color: lightpink;
+            // background-color: lightpink;
             @include flexbox;
             justify-content: flex-start;
 
@@ -142,6 +145,82 @@
                 color: $blue-regular;
               }
             }
+          }
+        }
+      }
+    }
+  }
+
+  .wallets__footer {
+    width: 100%;
+    height: 70px;
+    position: fixed;
+    z-index: 10;
+    bottom: 0px;
+  }
+}
+
+//Media Queries
+
+// ----- WIDTH -----
+//  900px
+
+@media (width < 900px) {
+  .wallets {
+    .wallets__body {
+      .wallets__sidebar {
+        display: none;
+      }
+
+      .wallets__content {
+        width: 100%;
+      }
+    }
+  }
+}
+
+//  700px
+
+@media (width < 700px) {
+  .wallets {
+    .wallets__body {
+      .wallets__sidebar {
+        display: none;
+      }
+
+      .wallets__content {
+        width: 100%;
+
+        .wallets__mint {
+          height: 320px;
+          .wallets__mint__content__header {
+            height: 70px;
+          }
+
+          .wallets__mint__content__body {
+            height: 200px;
+            flex-direction: column;
+
+            .wallets__mint__content__body__left {
+              width: 100%;
+
+              input {
+                width: 100%;
+                min-width: 0px;
+              }
+            }
+            .wallets__mint__content__body__right {
+              width: 100%;
+
+              button {
+                width: 100%;
+                min-width: 0px;
+              }
+            }
+          }
+
+          .wallets__mint__content__footer {
+            height: 50px;
           }
         }
       }

@@ -7,6 +7,7 @@ import "./Tasks.scss";
 //Components
 import Navbar from "../Navbar/Navbar";
 import Sidebar from "../Sidebar/Sidebar";
+import Navfooter from "../Navfooter/Navfooter";
 
 function Tasks() {
   return (
@@ -370,6 +371,9 @@ function Tasks() {
             </div>
           </div>
         </div>
+      </div>
+      <div className="tasks__footer">
+        <Navfooter page="tasks" />
       </div>
     </div>
   );
