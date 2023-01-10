@@ -132,8 +132,8 @@ function Sidebar({ page }: any) {
               />
             </div>
             <div className="sidebar__item__text">
-              <Link to="/configs" style={{ textDecoration: "none" }}>
-                <p style={setStyles("config").colorStyles}>Configs</p>
+              <Link to="/config" style={{ textDecoration: "none" }}>
+                <p style={setStyles("config").colorStyles}>Config</p>
               </Link>
             </div>
           </div>

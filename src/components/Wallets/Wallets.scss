@@ -157,6 +157,7 @@
     position: fixed;
     z-index: 10;
     bottom: 0px;
+    display: none;
   }
 }
 
@@ -175,6 +176,9 @@
       .wallets__content {
         width: 100%;
       }
+    }
+    .wallets__footer {
+      display: flex;
     }
   }
 }
