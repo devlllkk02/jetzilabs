@@ -142,6 +142,7 @@
     position: fixed;
     z-index: 10;
     bottom: 0px;
+    display: none;
   }
 }
 
@@ -160,6 +161,9 @@
       .minting__content {
         width: 100%;
       }
+    }
+    .minting__footer{
+      display: flex;
     }
   }
 }

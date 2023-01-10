@@ -107,6 +107,7 @@
     position: fixed;
     z-index: 10;
     bottom: 0px;
+    display: none;
   }
 }
 
@@ -124,6 +125,9 @@
       .notifications__content {
         width: 100%;
       }
+    }
+    .notifications__footer {
+      display: flex;
     }
   }
 }
@@ -149,10 +153,23 @@
             .notifications__mint__content__body__middle {
               height: 50px;
               width: 100%;
+
+              p {
+                width: 100%;
+                position: static;
+                text-align: right;
+                padding-right: 20px;
+              }
             }
             .notifications__mint__content__body__right {
               height: 70px;
-              width: 100%;           
+              width: 100%;
+
+              img {
+                cursor: pointer;
+                height: $icon-regular;
+                width: $icon-regular;
+              }
             }
           }
         }
