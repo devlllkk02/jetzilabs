@@ -7,6 +7,7 @@ import "./Notifications.scss";
 //Components
 import Navbar from "../Navbar/Navbar";
 import Sidebar from "../Sidebar/Sidebar";
+import Navfooter from "../Navfooter/Navfooter";
 
 function Notifications() {
   return (
@@ -44,6 +45,9 @@ function Notifications() {
             </div>
           </div>
         </div>
+      </div>
+      <div className="notifications__footer">
+        <Navfooter page="notifications" />
       </div>
     </div>
   );

@@ -5,7 +5,7 @@
   width: 100%;
   height: 100%;
   background-color: $grey-dark;
-  
+
   .notifications__body {
     width: 100%;
     height: calc(100% - 70px);
@@ -15,12 +15,12 @@
     .notifications__sidebar {
       width: 250px;
       height: 100%;
-      //   background-color: lightcoral;
+      // background-color: lightcoral;
     }
     .notifications__content {
       width: calc(100% - 250px);
       height: 100%;
-      //   background-color: lightgreen;
+      // background-color: seashell;
       overflow-y: auto;
       @include flexbox;
       flex-direction: column;
@@ -44,12 +44,12 @@
         .notifications__mint__content__body {
           width: 100%;
           height: 100%;
-          //   background-color: coral;
+          // background-color: coral;
 
           @include flexbox;
 
           .notifications__mint__content__body__left {
-            width: calc(100% - 250px);
+            width: calc(100% - 210px);
             height: 100%;
             // background-color: lightgreen;
 
@@ -65,7 +65,7 @@
             }
           }
           .notifications__mint__content__body__middle {
-            width: 100px;
+            width: 60px;
             height: 100%;
             // background-color: lightseagreen;
 
@@ -74,7 +74,7 @@
             p {
               position: absolute;
               bottom: 10px;
-              right: 20px;
+              right: 10px;
 
               color: $grey-light;
               font-size: $font-small;
@@ -95,6 +95,64 @@
               object-fit: contain;
               filter: invert(41%) sepia(70%) saturate(5249%) hue-rotate(339deg)
                 brightness(86%) contrast(104%);
+            }
+          }
+        }
+      }
+    }
+  }
+  .notifications__footer {
+    width: 100%;
+    height: 70px;
+    position: fixed;
+    z-index: 10;
+    bottom: 0px;
+  }
+}
+
+//Media Queries
+
+// ----- WIDTH -----
+//  Width : 900px
+@media (width < 900px) {
+  .notifications {
+    .notifications__body {
+      .notifications__sidebar {
+        display: none;
+      }
+
+      .notifications__content {
+        width: 100%;
+      }
+    }
+  }
+}
+
+//  Width : 600px
+@media (width < 600px) {
+  .notifications {
+    .notifications__body {
+      .notifications__sidebar {
+        display: none;
+      }
+
+      .notifications__content {
+        width: 100%;
+
+        .notifications__mint {
+          .notifications__mint__content__body {
+            flex-direction: column;
+            min-height: 150px;
+            .notifications__mint__content__body__left {
+              width: 100%;
+            }
+            .notifications__mint__content__body__middle {
+              height: 50px;
+              width: 100%;
+            }
+            .notifications__mint__content__body__right {
+              height: 70px;
+              width: 100%;           
             }
           }
         }
